@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f5f1; color: #24352c; font-family: system-ui, sans-serif; }
+button, input { font: inherit; }
+.contenedor { max-width: 720px; margin: 64px auto; padding: 0 20px; }
+.etiqueta { color: #487657; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1 { margin: 8px 0; font-size: clamp(32px, 6vw, 44px); }
+header > p:last-child, .nota, small { color: #647168; }
+.tarjeta { background: white; padding: 28px; margin-top: 28px; border: 1px solid #dce5dc; border-radius: 16px; }
+form > label { display: block; margin-bottom: 10px; font-weight: 600; }
+.formulario { display: flex; gap: 10px; margin-bottom: 8px; }
+.formulario input { flex: 1; min-width: 0; padding: 12px; border: 1px solid #bdcbbf; border-radius: 8px; }
+button { border: 0; border-radius: 8px; padding: 11px 18px; color: white; background: #386746; cursor: pointer; }
+button:hover { filter: brightness(0.92); }
+button:disabled { opacity: 0.55; cursor: wait; }
+:focus-visible { outline: 3px solid #82ac8c; outline-offset: 3px; }
+.resumen { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; }
+h2 { font-size: 20px; }
+.resumen span { color: #647168; font-size: 13px; }
+.lista { list-style: none; padding: 0; margin: 0; }
+.lista li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; border-bottom: 1px solid #e9eee8; }
+.nombre-tarea { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.nombre-tarea span { overflow-wrap: anywhere; }
+.nombre-tarea input { accent-color: #386746; width: 18px; height: 18px; flex-shrink: 0; }
+.completada .nombre-tarea span { text-decoration: line-through; color: #7c887e; }
+.eliminar { background: #fbefec; color: #9b4232; padding: 7px 10px; font-size: 13px; }
+.mensaje { color: #9b3429; background: #fff0ec; padding: 12px; border-radius: 8px; }
+.vacio { padding: 20px 0; color: #647168; }
+.recargar { background: transparent; color: #386746; padding-left: 0; margin-top: 16px; }
+.nota { text-align: center; font-size: 13px; }
+@media (max-width: 480px) {
+  .contenedor { margin: 32px auto; }
+  .tarjeta { padding: 18px; }
+  .formulario { flex-direction: column; }
+  .resumen { align-items: flex-start; flex-direction: column; gap: 0; }
+}
